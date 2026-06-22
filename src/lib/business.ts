@@ -1,7 +1,8 @@
 export const business = {
   name: "Klippday Herrfrisör & Barberare",
   tagline: "Master barbers on Vaksalagatan",
-  description: "Central barbershop with master barbers offering fades, classic cuts, and beard care.",
+  description:
+    "Varmt välkommen till KlippDay i Uppsala — professionell barbershop och herrfrisör med fokus på kvalitet, stil och service på Vaksalagatan 22C.",
   category: "Hair Salon",
   address: {
     street: "Vaksalagatan 22C",
@@ -15,13 +16,16 @@ export const business = {
   emailLink: "mailto:uppsalaklippday@gmail.com" as string | null,
   bookingUrl: "https://www.bokadirekt.se/places/klippday-herrfrisor-barberare-48268",
   bookingLabel: "Boka på Bokadirekt",
+  websiteUrl: "https://www.klippdayuppsala.se/" as string | null,
+  heroImage: "/images/hero.jpg",
+  aboutImage: "/images/gallery-2.jpg",
   facebookUrl: null as string | null,
-  instagramUrl: null as string | null,
+  instagramUrl: "https://instagram.com/klippday_guy" as string | null,
   owner: "Klippday",
   rating: 4.8,
-  reviewCount: 1702,
+  reviewCount: 1704,
   foundedYear: 2010,
-  coordinates: { lat: 59.8588, lng: 17.6386 },
+  coordinates: { lat: 59.861, lng: 17.6439 },
   hours: {
     note: "Ring gärna innan besök.",
     regular: [
@@ -36,14 +40,14 @@ export const business = {
   },
   trustBadges: [
     { label: "4.8 på Bokadirekt", icon: "star" },
-    { label: "1702+ omdömen", icon: "reviews" },
+    { label: "1704+ omdömen", icon: "reviews" },
     { label: "Uppsala centrum", icon: "location" },
     { label: "⚡ Urban Barber", icon: "student" },
   ],
   usps: [
     {
-      title: "Erfarna stylister",
-      description: "Professionell klippning och styling hos Klippday Herrfrisör & Barberare.",
+      title: "Master barberare",
+      description: "Erfarna barberare med fokus på fade, klassiska klippningar och skäggvård.",
     },
     {
       title: "Centralt läge",
@@ -51,7 +55,7 @@ export const business = {
     },
     {
       title: "Höga betyg",
-      description: "1702+ nöjda kunder enligt offentliga omdömen.",
+      description: "1704+ nöjda kunder enligt offentliga omdömen.",
     },
     {
       title: "Enkel bokning",
@@ -106,31 +110,52 @@ export const business = {
     },
   ],
   gallery: [
-    { id: 1, label: "Styling", before: "from-[#030712] to-[#111827]", after: "from-[#F59E0B]/40 to-[#111827]" },
-    { id: 2, label: "Behandling", before: "from-[#111827] to-[#030712]", after: "from-[#F59E0B]/30 to-[#030712]" },
-    { id: 3, label: "Resultat", before: "from-[#030712] to-[#111827]/80", after: "from-[#F59E0B] to-[#111827]/50" },
-    { id: 4, label: "Salong", before: "from-[#111827]/90 to-[#030712]", after: "from-[#F59E0B]/50 to-[#F59E0B]" },
-    { id: 5, label: "Detalj", before: "from-[#030712] to-[#F59E0B]/20", after: "from-[#111827] to-[#F59E0B]/35" },
-    { id: 6, label: "Atmosfär", before: "from-[#111827] to-[#F59E0B]/25", after: "from-[#F59E0B]/60 to-[#030712]" },
+    { id: 1, label: "Salongen", image: "/images/gallery-1.jpg" },
+    { id: 2, label: "Skin fade", image: "/images/gallery-2.jpg" },
+    { id: 3, label: "Styling", image: "/images/gallery-3.jpg" },
+    { id: 4, label: "Resultat", image: "/images/gallery-4.jpg" },
+    { id: 5, label: "Barberstol", image: "/images/gallery-5.jpg" },
+    { id: 6, label: "Atmosfär", image: "/images/gallery-6.jpg" },
   ],
   testimonials: [
     {
-      text: "Fantastisk upplevelse hos Klippday Herrfrisör & Barberare. Personalen var professionell och resultatet överträffade förväntningarna.",
-      author: "Kundrecension",
-      source: "Offentligt omdöme, parafraserat",
+      text: "Jättebra klippning. Tack!",
+      author: "Javier V.",
+      source: "Bokadirekt",
+      sourceUrl: "https://www.bokadirekt.se/places/klippday-herrfrisor-barberare-48268",
       rating: 5,
+      date: "2026-06-22",
     },
     {
-      text: "Rekommenderar Klippday Herrfrisör & Barberare varmt. Snabb service, trevligt bemötande och bra kvalitet till rimligt pris.",
-      author: "Kundrecension",
-      source: "Offentligt omdöme, parafraserat",
+      text: "Lyhörd, kompetent och jätte bra service. Super nöjd med Robin.",
+      author: "Ramin S.",
+      source: "Bokadirekt",
+      sourceUrl: "https://www.bokadirekt.se/places/klippday-herrfrisor-barberare-48268",
       rating: 5,
+      date: "2026-06-17",
+    },
+    {
+      text: "Har klippt mig hos Robin i 2 år, kommer inte att byta! Once you go Robin you never go back!",
+      author: "Colin D.",
+      source: "Bokadirekt",
+      sourceUrl: "https://www.bokadirekt.se/places/klippday-herrfrisor-barberare-48268",
+      rating: 5,
+      date: "2026-06-16",
+    },
+    {
+      text: "Fint bemötande. Klipper med omsorg.",
+      author: "Jannica S.",
+      source: "Bokadirekt",
+      sourceUrl: "https://www.bokadirekt.se/places/klippday-herrfrisor-barberare-48268",
+      rating: 5,
+      date: "2026-06-15",
     },
   ],
   about: {
     headline: "Om Klippday Herrfrisör & Barberare",
     paragraphs: [
-      "Central barbershop with master barbers offering fades, classic cuts, and beard care.",
+      "Vi på KlippDay Herrfrisering är specialister på herrfrisyrer, skägg, barbering och allt som hör till inom vårt yrke. Våra frisörer har lång erfarenhet av yrket och sätter alltid kunden i fokus — vi är oerhört måna om att du ska bli 100 % nöjd med ditt besök.",
+      "Hos oss möts du av skickliga barberare som erbjuder allt från trendiga fades till traditionell herrklippning och professionell skäggvård. Centralt på Vaksalagatan 22C — boka enkelt online.",
     ],
   },
   faq: [
@@ -144,7 +169,7 @@ export const business = {
     },
     {
       question: "Vad säger kunder om Klippday Herrfrisör & Barberare?",
-      answer: "Vi har 4.8 i snittbetyg baserat på 1702+ recensioner.",
+      answer: "Vi har 4.8 i snittbetyg baserat på 1704+ recensioner.",
     },
     {
       question: "Vilka öppettider har ni?",
