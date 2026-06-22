@@ -1,44 +1,31 @@
-import Link from "next/link";
 import { business } from "@/lib/business";
 
 export default function Hero() {
-  const label = "bookingLabel" in business ? business.bookingLabel : "Boka tid";
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#0f0f1a] via-[#1a1a2e] to-[#2a2a4a] text-white">
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute -right-20 top-10 h-72 w-72 rounded-full bg-[#c9a227] blur-3xl" />
-        <div className="absolute -left-10 bottom-0 h-64 w-64 rounded-full bg-slate-400 blur-3xl" />
-      </div>
-      <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:items-center lg:py-28">
+    <section id="hem" className="relative overflow-hidden bg-[var(--accent)] py-20">
+      <div className="absolute right-0 top-0 h-64 w-64 bg-[var(--secondary)]" style={{clipPath: "polygon(100% 0, 0 0, 100% 100%)"}} aria-hidden />
+      <div className="absolute bottom-0 left-0 h-48 w-48 bg-[var(--primary)]" style={{clipPath: "polygon(0 100%, 0 0, 100% 100%)"}} aria-hidden />
+      <div className="relative mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[1.2fr_1fr] lg:items-center">
         <div>
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium backdrop-blur">
-            <span aria-hidden>★</span>
-            {business.rating}/5 · {business.reviewCount}+ omdömen
-          </p>
-          <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-            Din stil,
-            <span className="block text-[#c9a227]">vår passion</span>
+          <p className="font-mono text-xs uppercase tracking-widest text-[var(--secondary)]">⚡ Drop-in & bokning</p>
+          <h1 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold text-[var(--primary)] sm:text-6xl">
+            Klipp dig
+            <span className="block text-[var(--secondary)]">på Klippday</span>
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-100/90">{business.description}</p>
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+          <p className="mt-6 text-lg text-[var(--foreground)]/70">{business.description}</p>
+          <div className="mt-8 grid grid-cols-2 gap-4 sm:flex">
             <a href={business.bookingUrl} target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-[#c9a227] px-8 py-4 text-base font-semibold text-[#0f0f1a] shadow-lg transition hover:bg-[#b8921f]">
-              {label}
-            </a>
-            <Link href="/tjanster"
-              className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 py-4 text-base font-semibold backdrop-blur transition hover:bg-white/20">
-              Se våra tjänster
-            </Link>
+              className="bg-[var(--primary)] px-8 py-4 text-center font-bold text-white">Boka</a>
+            <a href={business.phoneLink}
+              className="border-2 border-[var(--primary)] px-8 py-4 text-center font-bold text-[var(--primary)]">Ring</a>
           </div>
         </div>
-        <div className="relative">
-          <div className="aspect-[4/3] overflow-hidden rounded-3xl border border-white/20 bg-gradient-to-br from-slate-200/30 to-[#c9a227]/30 shadow-2xl">
-            <div className="flex h-full flex-col items-center justify-center p-8 text-center">
-              <span className="text-8xl" aria-hidden>✂️</span>
-              <p className="mt-4 text-xl font-semibold">Professionell styling</p>
-              <p className="mt-2 text-sm text-slate-100/80">Klippning · Färg · Skägg · Styling</p>
-            </div>
+        <div className="grid grid-cols-2 gap-3">
+          <div className="col-span-2 flex items-center justify-center bg-[var(--primary)] p-10 text-white">
+            <span className="text-7xl" aria-hidden>⚡</span>
           </div>
+          <div className="bg-[var(--secondary)] p-6 text-center font-mono text-sm font-bold text-[var(--dark)]">{business.rating}★</div>
+          <div className="bg-white p-6 text-center font-mono text-sm font-bold text-[var(--primary)]">{business.reviewCount}+ rec.</div>
         </div>
       </div>
     </section>
